@@ -1,0 +1,25 @@
+A minor change --> Implement a Logger using Logback  (Finished on 13/5/2025 03:15AM)
+  ========================
+
++ Forgot Password / Reset Password (Finished on 12/5/2025 at 04:19 AM)
+
++ Change Password (User must be logged-in/authenticated) (Finished on 13/5/2025 at 02:52 AM)
+
+  ========================
+
++ Exception Handling with profiling
++ API Standardization
+
+==================================================================================
+    (Sooner than later!)
+  ========================
+
++ Expire Tokens and OTPs using Redis
+
++ KeyCloak Implementation as a separate branch or a separate package
+
++ Serve Images
+    * File System in Project Files
+    * Using S3 Bucket
+
++ Message Queues (RabbitMQ) -> Use RabbitMQ for sending emails.

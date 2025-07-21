@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: dubizzle_like_app_mysql_db
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: dubizzle_like_app
+      MYSQL_USER: sqluser
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    build: .
+    container_name: dubizzle_like_app
+    restart: on-failure
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/dubizle_like_app
+      SPRING_DATASOURCE_USERNAME: sqluser
+      SPRING_DATASOURCE_PASSWORD: password
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
